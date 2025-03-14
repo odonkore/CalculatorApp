@@ -1,0 +1,118 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_color"
+    tools:context=".MainActivity">
+
+    <!-- Display Screen -->
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/display_background"
+        android:gravity="end"
+        android:padding="16dp"
+        android:textSize="32sp"
+        android:textColor="@color/white"
+        android:text="@string/zero" />
+
+    <!-- Calculator Buttons -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:padding="4dp">
+
+        <!-- Row 1 -->
+        <Button android:id="@+id/btn_clear" android:text="@string/clear"
+            android:backgroundTint="@color/button_color" android:textColor="@color/button_text_color" />
+
+        <Button android:id="@+id/btn_back" android:text="@string/back"
+            android:backgroundTint="@color/button_color" android:textColor="@color/button_text_color" />
+
+        <Button android:id="@+id/btn_percent" android:text="@string/percent"
+            android:backgroundTint="@color/operation_button_color" android:textColor="@color/button_text_color" />
+
+        <Button android:id="@+id/btn_divide" android:text="@string/divide"
+            android:backgroundTint="@color/operation_button_color" android:textColor="@color/button_text_color" />
+
+        <!-- Row 2 -->
+        <Button android:id="@+id/btn_7" android:text="@string/seven"
+            android:backgroundTint="@color/button_color" android:textColor="@color/button_text_color" />
+
+        <Button android:id="@+id/btn_8" android:text="@string/eight"
+            android:backgroundTint="@color/button_color" android:textColor="@color/button_text_color" />
+
+        <Button android:id="@+id/btn_9" android:text="@string/nine"
+            android:backgroundTint="@color/button_color" android:textColor="@color/button_text_color" />
+
+        <Button android:id="@+id/btn_multiply" android:text="@string/multiply"
+            android:backgroundTint="@color/operation_button_color" android:textColor="@color/button_text_color" />
+
+        <!-- Row 3 -->
+        <Button android:id="@+id/btn_4" android:text="@string/four"
+            android:backgroundTint="@color/button_color" android:textColor="@color/button_text_color" />
+
+        <Button android:id="@+id/btn_5" android:text="@string/five"
+            android:backgroundTint="@color/button_color" android:textColor="@color/button_text_color" />
+
+        <Button android:id="@+id/btn_6" android:text="@string/six"
+            android:backgroundTint="@color/button_color" android:textColor="@color/button_text_color" />
+
+        <Button android:id="@+id/btn_subtract" android:text="@string/subtract"
+            android:backgroundTint="@color/operation_button_color" android:textColor="@color/button_text_color" />
+
+        <!-- Row 4 -->
+        <Button android:id="@+id/btn_1" android:text="@string/one"
+            android:backgroundTint="@color/button_color" android:textColor="@color/button_text_color" />
+
+        <Button android:id="@+id/btn_2" android:text="@string/two"
+            android:backgroundTint="@color/button_color" android:textColor="@color/button_text_color" />
+
+        <Button android:id="@+id/btn_3" android:text="@string/three"
+            android:backgroundTint="@color/button_color" android:textColor="@color/button_text_color" />
+
+        <Button android:id="@+id/btn_add" android:text="@string/add"
+            android:backgroundTint="@color/operation_button_color" android:textColor="@color/button_text_color" />
+
+        <!-- Row 5 -->
+        <Button android:id="@+id/btn_0" android:text="@string/zero"
+            android:backgroundTint="@color/button_color" android:textColor="@color/button_text_color"
+            android:contentDescription="@null" tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Button android:id="@+id/btn_dot" android:text="@string/dot"
+            android:backgroundTint="@color/button_color" android:textColor="@color/button_text_color" />
+
+        <Button
+            android:id="@+id/btn_equals"
+            android:backgroundTint="@color/equal_button_color"
+            android:text="@string/equals"
+            android:textColor="#424242" />
+
+    </GridLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/display_background"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:maxLines="5"
+            android:scrollbars="vertical"/>
+    </ScrollView>
+
+
+</LinearLayout>

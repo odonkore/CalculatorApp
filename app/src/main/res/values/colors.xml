@@ -1,0 +1,10 @@
+<resources>
+    <color name="background_color">#121212</color>  <!-- Dark background -->
+    <color name="display_background">#1F1F1F</color>  <!-- Darker screen background -->
+    <color name="button_color">#3A3A3A</color>  <!-- Dark gray buttons -->
+    <color name="operation_button_color">#005BBB</color>  <!-- Deep blue operations -->
+    <color name="equal_button_color">#FF9500</color>  <!-- Orange equals button -->
+    <color name="button_text_color">#FFFFFF</color>  <!-- White text -->
+    <color name="white">#FFFFFF</color>
+
+</resources>

@@ -1,3 +1,3 @@
 package com.example.calculatorapp
 
-data class CalculationHistory()
+data class CalculationHistory(val expression: String, val result: String)

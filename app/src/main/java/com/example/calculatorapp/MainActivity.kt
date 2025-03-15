@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
 
-    private val historyList = mutableListOf<String>()
+    private val historyList = mutableListOf<CalculationHistory>()
     private lateinit var tvHistory: TextView
     private lateinit var display: TextView
     private var currentInput = ""
@@ -126,16 +126,19 @@ class MainActivity : AppCompatActivity() {
         val resultText = if (result % 1 == 0.0) result.toInt().toString() else result.toString()
 
         // Format history entry to include both calculation and result
-        val calculation = "$expressionText = $resultText"
+        //val calculationText = "$expressionText = $resultText"
+        val calculation = CalculationHistory(display.text.toString(), resultText) // adds new calculations
+        historyList.add(0, calculation)
 
-        historyList.add(0, calculation) // Add newest calculation at the top
-        tvHistory.text = historyList.joinToString("\n") // Update history TextView
+        // Update history TextView
+        tvHistory.text = historyList.joinToString("\n") { "${it.expression} = ${it.result}" }
 
         Log.d("CalculatorApp", "History: ${historyList.joinToString("\n")}") // Debug log for history
 
         // Show result in display
         display.text = resultText
 
+        // Log errors if any
     } catch (e: Exception) {
         display.text = getString(R.string.error_message)
         Log.e("CalculatorApp", "Error evaluating expression", e) // Log errors if any
